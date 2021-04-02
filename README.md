@@ -92,6 +92,14 @@ Baixar e instalar o [VSCode](https://code.visualstudio.com/).
 ![](screenshots/extensions01.png)
 ![](screenshots/extensions02.png)
 
+### 1.3 Abrir o VSCode pelo terminal
+- Digite Ctrl + Shift + P (Cmd + Shift + P)
+- Digitar `shell command`
+- Selecionar a opção `Shell Command: Install 'code' command in PATH`
+Fecha o terminal e abra novamente.
+
+Agora, pode-se abrir uma pasta no VSCode pelo terminal, estando no dir
+
 ## 2. Instalar o Zsh
 Instalar seguindo este guia contido [neste](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) link.
 
@@ -188,9 +196,28 @@ Esses são os plugins que utilizo e abaixo explico como funciona cada um deles:
 
 
 ## 6. Instalar o Node
+### 6.1 Instalar o NVN (Node Version Manager)
+Instalar seguindo os passos contidos [aqui](https://github.com/nvm-sh/nvm).
+
+### 6.2 Instalar o NodeJS
+Verificar a versão LTS no site do [NodeJS](https://nodejs.org/en/download/).
+- Exemplo: v14.16
+
+No terminal, executar o comando para a instalar:
+```
+nvm install 14.16
+```
+
+Para verificar se instalou com sucesso, rodar o comando:
+```
+node -v
+```
 
 ## 7. Instalar o Yarn
-
+Instalar o Yarn de forma global com o seguinte comando:
+```
+npm install -g yarn
+```
 
 ## Ferramentas
 
