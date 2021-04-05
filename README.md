@@ -1,6 +1,20 @@
 ﻿# Ambiente de desenvolvimento NodeJS, React, React Native
 
-## 1. VSCode
+- [Ambiente geral](#ambinete-geral)
+    - [Softwares](#softwares-geral)
+        - [VSCode](#vscode)
+- [React Native](#react-native)
+    - [Softwares](#softwares-react-native)
+        - [Android Studio](#android-studio)
+        - [Emulador Android](#emulador-android)
+            - [Instalação](#instalacao-emulador)
+            - [Abrir emulador pelo terminal](#iniciando-o-emulador-pelo-terminal)
+- [Ferramentas](#ferramentas)
+    - [Insomnia](#insomnia)
+
+## Ambiente geral
+<h3 id="softwares-geral">Softwares</h3>
+#### VSCode
 Baixar e instalar o [VSCode](https://code.visualstudio.com/).
 
 ### 1.1 Substituir todo o conteúdo do arquivo de configuração pelo conteúdo abaixo.
@@ -217,6 +231,42 @@ node -v
 Instalar o Yarn de forma global com o seguinte comando:
 ```
 npm install -g yarn
+```
+
+## React Native
+<h3 id="softwares-react-native">Softwares</h3>
+#### Android Studio
+Baixar e instalar o [Android Studio](https://developer.android.com/studio?hl=pt-br).
+
+#### Emulador Android
+<h5 id="instalacao-emulador">Instalação</h3>
+Ao abrir o Android Studio, clicar em `Configure > AVD Manager`.
+Clicar no botão `+ Create Virtual Device...`.
+Escolha o o modelo `Pixel 4` e clique em `Next`.
+Clique em `Download` na versão do Android desejada e efetue a instalação.
+
+##### Iniciando o emulador pelo terminal
+Antes de tudo, precisamos configurar as variáveis de ambiente da SDK do Android.
+Adicione no final do arquivo `.zshrc`:
+
+- Linux:
+```
+export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+```
+- MacOS:
+```
+export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
+```
+
+Listando os emuladores disponíveis:
+```
+emulator -list-avds
+```
+
+Executando um emulador:
+```
+emulator -avd Pixel_4_API_30
 ```
 
 ## Ferramentas
