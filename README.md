@@ -11,6 +11,7 @@
             - [Abrir emulador pelo terminal](#iniciando-o-emulador-pelo-terminal)
 - [Ferramentas](#ferramentas)
     - [Insomnia](#insomnia)
+    - [Reactotron](#reactotron)
 
 ## Ambiente geral
 <h3 id="softwares-geral">Softwares</h3>
@@ -275,6 +276,34 @@ emulator -avd Pixel_4_API_30
 
 Ferramenta para testes de requisições à API
 [Download](https://insomnia.rest/)
+
+### Reactotron
+É uma excelente ferramenta de Debug, podendo visualizar estados do Redux, requisições à API e diversas outras coisas.
+Instalar conforme a plataforma a partir deste link: https://github.com/infinitered/reactotron/releases
+
+Para utilizá-lo, é necessário que o projeto esteja configurado de acordo.
+Abaixo segue um arquivo de exemplo, utilizando Redux e Redux-Saga:
+```
+import Reactotron from 'reactotron-react-native';
+import { reactotronRedux } from 'reactotron-redux';
+import reactotronSaga from 'reactotron-redux-saga';
+import { AsyncStorage, NativeModules } from 'react-native';
+
+if (__DEV__) {
+  const { scriptURL } = NativeModules.SourceCode;
+  const host = scriptURL.split('://')[1].split(':')[0];
+
+  const tron = Reactotron.setAsyncStorageHandler(AsyncStorage)
+    .configure({ host })
+    .useReactNative()
+    .use(reactotronRedux())
+    .use(reactotronSaga())
+    .connect();
+
+  console.tron = tron;
+  tron.clear();
+}
+```
 
 ### DevDocs
 
