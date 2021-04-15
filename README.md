@@ -234,7 +234,12 @@ Watchman é uma ferramenta do Facebook para observar mudanças no sistema de arq
 brew install watchman
 ```
 
-## 8. Instalar o Yarn
+## 8. Instalar CocoaPods
+```
+sudo gem install cocoapods
+```
+
+## 9. Instalar o Yarn
 Instalar o Yarn de forma global com o seguinte comando:
 ```
 npm install -g yarn
