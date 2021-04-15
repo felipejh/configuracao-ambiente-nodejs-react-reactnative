@@ -228,7 +228,13 @@ Para verificar se instalou com sucesso, rodar o comando:
 node -v
 ```
 
-## 7. Instalar o Yarn
+## 7.Instalar o Watchman
+Watchman é uma ferramenta do Facebook para observar mudanças no sistema de arquivos. É altamente recomendável que você instale-o para melhor desempenho.
+```
+brew install watchman
+```
+
+## 8. Instalar o Yarn
 Instalar o Yarn de forma global com o seguinte comando:
 ```
 npm install -g yarn
