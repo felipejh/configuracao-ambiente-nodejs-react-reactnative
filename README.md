@@ -251,6 +251,27 @@ npm install -g yarn
 Baixar e instalar o [Android Studio](https://developer.android.com/studio?hl=pt-br).
 
 #### Emulador Android
+### JDK
+1 - Acessar o link ```https://adoptopenjdk.net/``` e baixar o JDK 11 com HotSpot.
+2 - Extrair na pasta ```/opt``` e renomear para
+```
+jdk-11
+```
+
+Dar permissão com
+```
+sudo chown felipe chown -R
+```
+
+3 - Setar a versão corrente com os comandos abaixo:
+```
+sudo update-alternatives --install /usr/bin/java java /opt/jdk-11/bin/java 1
+```
+
+```
+sudo update-alternatives --install /usr/bin/javac javac /opt/jdk-11/bin/javac 1
+```
+
 <h5 id="instalacao-emulador">Instalação</h3>
 Ao abrir o Android Studio, clicar em `Configure > AVD Manager`.
 Clicar no botão `+ Create Virtual Device...`.
