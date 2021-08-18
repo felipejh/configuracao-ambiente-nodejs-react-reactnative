@@ -284,7 +284,7 @@ Adicione no final do arquivo `.zshrc`:
 
 - Linux:
 ```
-export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+export PATH="${HOME}/Android/Sdk/tools:${HOME}/Android/Sdk/platform-tools:${PATH}"
 ```
 - MacOS:
 ```
