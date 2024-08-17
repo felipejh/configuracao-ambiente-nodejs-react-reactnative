@@ -310,6 +310,8 @@ Baixar e instalar o [Android Studio](https://developer.android.com/studio?hl=pt-
 
 ### JDK
 
+#### Linux
+
 1 - Acessar o link `https://adoptopenjdk.net/` e baixar o JDK 11 com HotSpot.
 2 - Extrair na pasta `/opt` e renomear para
 
@@ -332,6 +334,10 @@ sudo update-alternatives --install /usr/bin/java java /opt/jdk-11/bin/java 1
 ```
 sudo update-alternatives --install /usr/bin/javac javac /opt/jdk-11/bin/javac 1
 ```
+
+#### MacOS
+
+- [jEnv](http://jenv.be)
 
 <h5 id="instalacao-emulador">Instalação</h3>
 Ao abrir o Android Studio, clicar em `Configure > AVD Manager`.
